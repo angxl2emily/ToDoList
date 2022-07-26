@@ -18,6 +18,7 @@
 		490B81E828864CEA00F8D9DB /* ToDoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490B81E728864CEA00F8D9DB /* ToDoUITestsLaunchTests.swift */; };
 		490B81F528864E0800F8D9DB /* ToDoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490B81F428864E0800F8D9DB /* ToDoTableViewController.swift */; };
 		490B81F728864E3900F8D9DB /* ToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490B81F628864E3900F8D9DB /* ToDo.swift */; };
+		49CE714A2890768E007618AF /* AddToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CE71492890768E007618AF /* AddToDoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		490B81E728864CEA00F8D9DB /* ToDoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		490B81F428864E0800F8D9DB /* ToDoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoTableViewController.swift; sourceTree = "<group>"; };
 		490B81F628864E3900F8D9DB /* ToDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDo.swift; sourceTree = "<group>"; };
+		49CE71492890768E007618AF /* AddToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToDoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 				490B81D228864CEA00F8D9DB /* Info.plist */,
 				490B81CA28864CE700F8D9DB /* ToDo.xcdatamodeld */,
 				490B81F428864E0800F8D9DB /* ToDoTableViewController.swift */,
+				49CE71492890768E007618AF /* AddToDoViewController.swift */,
 				490B81F628864E3900F8D9DB /* ToDo.swift */,
 			);
 			path = ToDo;
@@ -268,6 +271,7 @@
 				490B81F728864E3900F8D9DB /* ToDo.swift in Sources */,
 				490B81F528864E0800F8D9DB /* ToDoTableViewController.swift in Sources */,
 				490B81C428864CE700F8D9DB /* SceneDelegate.swift in Sources */,
+				49CE714A2890768E007618AF /* AddToDoViewController.swift in Sources */,
 				490B81CC28864CE700F8D9DB /* ToDo.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

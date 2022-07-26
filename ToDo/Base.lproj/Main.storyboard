@@ -43,10 +43,10 @@
             </objects>
             <point key="canvasLocation" x="610.14492753623188" y="37.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Add To Do View Controller-->
         <scene sceneID="l5F-fI-5xc">
             <objects>
-                <viewController id="Yzm-6b-FWX" sceneMemberID="viewController">
+                <viewController id="Yzm-6b-FWX" customClass="AddToDoViewController" customModule="ToDo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OY4-9A-wIA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -81,12 +81,19 @@
                                 <color key="tintColor" red="0.1960784314" green="0.3411764706" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Add To-Do" cornerStyle="capsule"/>
+                                <connections>
+                                    <action selector="addTapped:" destination="Yzm-6b-FWX" eventType="touchUpInside" id="dZ1-ic-MJ6"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="G0p-vT-Epx"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="Mx2-Es-5xB"/>
+                    <connections>
+                        <outlet property="importantSwitch" destination="tcF-Yd-Ir8" id="NlI-bF-WKe"/>
+                        <outlet property="titleTextField" destination="Hea-If-URX" id="xtr-Yd-6GH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pMv-cZ-nn1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
