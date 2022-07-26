@@ -9,14 +9,28 @@ import UIKit
 
 class ToDoTableViewController: UITableViewController {
 
-    var toDos : [ToDo] = []
-    
+    var toDos : [ToDoCD] = []
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        toDos = createToDos()
+        
+        getToDos()
+        //toDos = createToDos()
     }
+    
+    func getToDos() {
+      if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
 
+        if let coreDataToDos = try? context.fetch(ToDoCD.fetchRequest()) as? [ToDoCD] {
+                toDos = coreDataToDos
+                tableView.reloadData()
+        }
+      }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+      getToDos()
+    }
     
     func createToDos() -> [ToDo]{
         let swift = ToDo()
@@ -45,16 +59,17 @@ class ToDoTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
-        // Configure the cell...
-        let toDo = toDos[indexPath.row]
-        
-        if toDo.important{
-            cell.textLabel?.text = "❗️" + toDo.name
-        }
-        else{
-            cell.textLabel?.text = toDo.name
-        }
-        return cell
+         let toDo = toDos[indexPath.row]
+
+         if let name = toDo.name {
+           if toDo.important {
+               cell.textLabel?.text = "❗️" + name
+           } else {
+               cell.textLabel?.text = toDo.name
+           }
+         }
+
+         return cell
     }
     
 
@@ -107,7 +122,7 @@ class ToDoTableViewController: UITableViewController {
         addVC.previousVC = self
       }
         if let completeVC = segue.destination as? CompleteToDoViewController {
-            if let toDo = sender as? ToDo {
+            if let toDo = sender as? ToDoCD {
               completeVC.selectedToDo = toDo
               completeVC.previousVC = self
             }
